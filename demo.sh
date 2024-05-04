@@ -2,8 +2,13 @@
 
 . ./datetime.sh
 
-echo "=== unixtime ==="
-unixtime v -utc
+echo "=== unixtime (UTC) ==="
+unixtime v
+echo "$v"
+echo
+
+echo "=== unixtime (local) ==="
+unixtime v -local
 echo "$v"
 echo
 

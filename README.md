@@ -10,12 +10,15 @@ Datetime and Unixtime conversion functions for POSIX shells.
 ## Usage
 
 ```sh
-unixtime v -utc
-echo "$v" # => 1714831692
+unixtime v
+echo "$v" # => 1714860198 (UTC)
+
+unixtime v -local
+echo "$v" # => 1714892598 (local)
 
 unixtime2datetime v "$v"
-echo "$v" # => 2024-05-04T14:08:12
+echo "$v" # => 2024-05-05T07:03:18
 
 datetime2unixtime v "$v"
-echo "$v" # => 1714831692
+echo "$v" # => 1714892598
 ```

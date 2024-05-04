@@ -1,5 +1,5 @@
 unixtime() {
-  [ "${2:-}" = -utc ] || set -- "$1"
+  set -- "$1" "${2:--utc}" && [ "$2" = -local ] && set -- "$1"
   datetime2unixtime "$1" "$(date ${2+-u} +'%Y-%m-%dT%H:%M:%S')"
 }
 
